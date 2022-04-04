@@ -18,7 +18,7 @@ const Todo = ({ todos, setTodos, todo }) => {
   }
 
   return (
-    <div className="flex w-72 justify-between items-center bg-slate-200 my-3 rounded-md px-4 py-3 shadow-slate-600 shadow-md">
+    <div className="flex md:w-72 justify-between items-center bg-slate-200 my-3 rounded-md px-4 py-3 shadow-slate-600 shadow-md">
       <div className="bg-slate-200">
         <input
           className="w-4 h-4 mr-3"
@@ -31,7 +31,7 @@ const Todo = ({ todos, setTodos, todo }) => {
         <label className="bg-slate-200 text-lg font-regular text-indigo-600">{todo.text}</label>
       </div>
       <div
-        className="bg-indigo-500 rounded-md cursor-pointer p-2.5 hover:bg-indigo-600 transition duration-200 ease-in-out"
+        className="bg-indigo-500 rounded-md cursor-pointer p-2.5 shadow-slate-600 shadow-sm hover:bg-indigo-600 transition duration-200 ease-in-out"
       >
         <FaTrash
           className="bg-indigo-500 hover:bg-indigo-600"

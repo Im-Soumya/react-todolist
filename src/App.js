@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="grid justify-items-center">
-      <h1 className="text-xl font-bold">Todo List</h1>
+      <h1 className="m-7 font-medium text-3xl">Todo List</h1>
       <TodoForm todos={todos} setTodos={setTodos} />
       {todos?.map((todo, index) => (
         <Todo

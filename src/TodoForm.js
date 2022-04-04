@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { GrFormAdd } from "react-icons/gr";
 
 const TodoForm = ({ todos, setTodos }) => {
   const [value, setValue] = useState("")
@@ -16,16 +17,24 @@ const TodoForm = ({ todos, setTodos }) => {
   }
 
   return (
-    <div className="">
-      <form onSubmit={addTodo}>
+    <div className="flex items-center mb-3 border-2 border-indigo-200 rounded-lg">
+      <form
+        className="flex items-center"
+        onSubmit={addTodo}
+      >
         <input
+          className="text-white placeholder-white px-3 py-2 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
           type="text"
           value={value}
           placeholder="Enter a task"
           onChange={(e) => setValue(e.target.value)}
         />
-        <button>Add</button>
       </form>
+      <button
+        className="text-lg font-medium py-2 px-2 rounded-md hover:bg-indigo-500 transition duration-200"
+        onClick={addTodo}
+      >
+        Add</button>
     </div>
   )
 }
