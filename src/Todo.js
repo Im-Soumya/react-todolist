@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTrash } from "react-icons/fa"
 
 const Todo = ({ todos, setTodos, todo }) => {
 
@@ -17,16 +18,26 @@ const Todo = ({ todos, setTodos, todo }) => {
   }
 
   return (
-    <div>
-      <input
-        type="checkbox"
-        id="checkbox"
-        value={todo.checked}
-        checked={todo.checked}
-        onChange={() => checkTodo(todo.id)}
-      />
-      <label>{todo.text}</label>
-      <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+    <div className="flex w-72 justify-between items-center bg-slate-200 my-3 rounded-md px-4 py-3 shadow-slate-600 shadow-md">
+      <div className="bg-slate-200">
+        <input
+          className="w-4 h-4 mr-3"
+          type="checkbox"
+          id="checkbox"
+          value={todo.checked}
+          checked={todo.checked}
+          onChange={() => checkTodo(todo.id)}
+        />
+        <label className="bg-slate-200 text-lg font-regular text-indigo-600">{todo.text}</label>
+      </div>
+      <div
+        className="bg-indigo-500 rounded-md cursor-pointer p-2.5 hover:bg-indigo-600 transition duration-200 ease-in-out"
+      >
+        <FaTrash
+          className="bg-indigo-500 hover:bg-indigo-600"
+          onClick={() => deleteTodo(todo.id)}
+        />
+      </div>
     </div>
   )
 }

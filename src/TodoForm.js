@@ -16,7 +16,7 @@ const TodoForm = ({ todos, setTodos }) => {
   }
 
   return (
-    <div>
+    <div className="">
       <form onSubmit={addTodo}>
         <input
           type="text"
